@@ -1,0 +1,32 @@
+{
+  "modelo": "LinearRegression (scikit-learn)",
+  "objetivo": "gasto_dia (S/) del día a estimar",
+  "variables": [
+    "dia_mar",
+    "dia_mie",
+    "dia_jue",
+    "dia_vie",
+    "dia_sab",
+    "dia_dom",
+    "es_feriado",
+    "tarifa_troncal",
+    "prom_gasto_7d",
+    "prom_mismo_dia_4sem",
+    "dias_con_viaje_7d"
+  ],
+  "intercepto": -0.4167617092359688,
+  "coeficientes": {
+    "dia_mar": -0.025779074038820224,
+    "dia_mie": 0.10984767715898992,
+    "dia_jue": 0.1060747036855248,
+    "dia_vie": -0.029240387414313715,
+    "dia_sab": 0.13278951521727722,
+    "dia_dom": -0.46655408009659277,
+    "es_feriado": -1.7578328233122458,
+    "tarifa_troncal": 0.5294398390017011,
+    "prom_gasto_7d": -0.14936194591512159,
+    "prom_mismo_dia_4sem": 0.7448879044867548,
+    "dias_con_viaje_7d": 0.1044668021706564
+  },
+  "nota": "Entrenado con datos SINTÉTICOS. La predicción se recorta a 0 si es negativa."
+}

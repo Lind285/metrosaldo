@@ -1,0 +1,4 @@
+Modelo,Casos evaluados,MAE (días),% con error <= 1 día
+Línea base (promedio 7 días),96,3.29,33.3
+Regresión lineal,96,1.9,50.0
+Árbol de decisión,96,1.94,45.8

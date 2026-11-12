@@ -1,0 +1,10 @@
+Modelo,Métrica,Validación,Prueba
+Línea base (promedio 7 días),MAE,1.698,1.506
+Línea base (promedio 7 días),RMSE,1.952,1.706
+Línea base (promedio 7 días),R2,0.049,-0.027
+Regresión lineal,MAE,0.992,1.03
+Regresión lineal,RMSE,1.403,1.363
+Regresión lineal,R2,0.509,0.345
+Árbol de decisión,MAE,0.867,0.915
+Árbol de decisión,RMSE,1.3,1.329
+Árbol de decisión,R2,0.578,0.377

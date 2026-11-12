@@ -1,0 +1,98 @@
+=== Datos ===
+Registros: 9520 | Estudiantes: 80
+Faltantes: 0 | Duplicados: 0
+Días sin viaje: 39.4 %
+count    9520.00
+mean        2.37
+std         2.28
+min         0.00
+25%         0.00
+50%         3.20
+75%         3.35
+max        10.50
+Name: gasto_dia, dtype: float64
+Registros utilizables (con 4 semanas de historial): 7280
+Estudiantes train/val/test: 56/12/12 | filas: 5096/1092/1092
+Mejor árbol en validación: max_depth=5, min_samples_leaf=5 (MAE=0.867)
+
+=== Resultados: gasto diario (S/) ===
+                      Modelo Métrica  Validación  Prueba
+Línea base (promedio 7 días)     MAE       1.698   1.506
+Línea base (promedio 7 días)    RMSE       1.952   1.706
+Línea base (promedio 7 días)      R2       0.049  -0.027
+            Regresión lineal     MAE       0.992   1.030
+            Regresión lineal    RMSE       1.403   1.363
+            Regresión lineal      R2       0.509   0.345
+           Árbol de decisión     MAE       0.867   0.915
+           Árbol de decisión    RMSE       1.300   1.329
+           Árbol de decisión      R2       0.578   0.377
+
+=== Resultados: fecha de agotamiento con saldo inicial S/ 20.00 (prueba) ===
+                      Modelo  Casos evaluados  MAE (días)  % con error <= 1 día
+Línea base (promedio 7 días)               96        3.29                  33.3
+            Regresión lineal               96        1.90                  50.0
+           Árbol de decisión               96        1.94                  45.8
+
+=== Coeficientes de la regresión lineal ===
+intercepto: -0.4168
+  dia_mar                -0.0258
+  dia_mie                 0.1098
+  dia_jue                 0.1061
+  dia_vie                -0.0292
+  dia_sab                 0.1328
+  dia_dom                -0.4666
+  es_feriado             -1.7578
+  tarifa_troncal          0.5294
+  prom_gasto_7d          -0.1494
+  prom_mismo_dia_4sem     0.7449
+  dias_con_viaje_7d       0.1045
+
+=== Reglas del árbol (primeros niveles) ===
+|--- prom_mismo_dia_4sem <= 1.88
+|   |--- prom_mismo_dia_4sem <= 1.04
+|   |   |--- prom_gasto_7d <= 3.30
+|   |   |   |--- prom_mismo_dia_4sem <= 0.82
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- prom_mismo_dia_4sem >  0.82
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- prom_gasto_7d >  3.30
+|   |   |   |--- prom_gasto_7d <= 4.51
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- prom_gasto_7d >  4.51
+|   |   |   |   |--- truncated branch of depth 2
+|   |--- prom_mismo_dia_4sem >  1.04
+|   |   |--- dia_dom <= 0.50
+|   |   |   |--- tarifa_troncal <= 2.40
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- tarifa_troncal >  2.40
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- dia_dom >  0.50
+|   |   |   |--- prom_mismo_dia_4sem <= 1.42
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- prom_mismo_dia_4sem >  1.42
+|   |   |   |   |--- truncated branch of depth 2
+|--- prom_mismo_dia_4sem >  1.88
+|   |--- tarifa_troncal <= 2.40
+|   |   |--- es_feriado <= 0.50
+|   |   |   |--- dia_dom <= 0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- dia_dom >  0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- es_feriado >  0.50
+|   |   |   |--- prom_gasto_7d <= 1.70
+|   |   |   |   |--- value: [0.00]
+|   |   |   |--- prom_gasto_7d >  1.70
+|   |   |   |   |--- truncated branch of depth 2
+|   |--- tarifa_troncal >  2.40
+|   |   |--- es_feriado <= 0.50
+|   |   |   |--- prom_mismo_dia_4sem <= 3.27
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- prom_mismo_dia_4sem >  3.27
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- es_feriado >  0.50
+|   |   |   |--- prom_mismo_dia_4sem <= 6.81
+|   |   |   |   |--- value: [0.00]
+|   |   |   |--- prom_mismo_dia_4sem >  6.81
+|   |   |   |   |--- value: [0.50]
+
+Modelo exportado en modelo_regresion_lineal.json
