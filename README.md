@@ -2,7 +2,6 @@
 
 Modelo que estima el **gasto diario** de un estudiante en el Metropolitano y, con ello, la **fecha aproximada en que su saldo dejará de cubrir un pasaje**.
 
-> **Aviso:** el dataset es **sintético** (simulado con reglas y azar controlado por semilla). No contiene datos de personas reales ni del sistema oficial del Metropolitano. Los resultados solo son válidos para estos datos simulados y deben confirmarse con datos reales de la prueba piloto.
 
 ## Archivos
 
