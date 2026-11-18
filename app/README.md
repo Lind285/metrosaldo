@@ -1,6 +1,6 @@
 # MetroSaldo – App móvil (React Native + Expo)
 
-Monedero virtual de seguimiento del saldo de la tarjeta del Metropolitano. El saldo es una **estimación** basada en lo que registra el usuario; la app no se conecta con el sistema oficial.
+Monedero virtual de seguimiento del saldo de la tarjeta del Metropolitano. El saldo es una estimación basada en lo que registra el usuario; la app no se conecta con el sistema oficial.
 
 ## Funcionalidades implementadas
 
@@ -26,7 +26,7 @@ Los datos se guardan solo en el celular, con AsyncStorage.
 
 ## Modelo
 
-La app usa los coeficientes de la regresión lineal entrenada en Python. Están en `modelo_regresion_lineal.json`, en la carpeta `ml/`.
+La app usa los coeficientes de la regresión lineal entrenada en Python. Están en `modelo_regresion_lineal.json`.
 
 Las reglas según los días de historial son:
 
