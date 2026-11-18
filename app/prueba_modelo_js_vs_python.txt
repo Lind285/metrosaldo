@@ -1,0 +1,5 @@
+E005 2026-10-12 | Python dias: 9 JS dias: 9 | Python g7: 14.8181 JS g7: 14.8181 | metodo regresion alta 56
+E036 2026-09-21 | Python dias: 7 JS dias: 7 | Python g7: 16.3366 JS g7: 16.3366 | metodo regresion alta 35
+E050 2026-11-09 | Python dias: 7 JS dias: 7 | Python g7: 17.4248 JS g7: 17.4248 | metodo regresion alta 84
+E012 2026-09-28 | Python dias: 11 JS dias: 11 | Python g7: 10.8094 JS g7: 10.8094 | metodo regresion alta 42
+E070 2026-10-19 | Python dias: 8 JS dias: 8 | Python g7: 15.1161 JS g7: 15.1161 | metodo regresion alta 63
