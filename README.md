@@ -20,15 +20,9 @@ Modelo que estima el gasto diario de un estudiante en el Metropolitano y con ell
 
 ## Cómo ejecutar
 
-**Local:** Python 3.10 o superior.
-
-```bash
-pip install scikit-learn pandas matplotlib
-python generar_dataset.py
-python entrenar_modelo.py
-```
-
-**Google Colab:** subir `MetroSaldo_ML.ipynb` y ejecutar todas las celdas.
+**Google Colab:** subir `MetroSaldo_ML.ipynb` y ejecutar todas las celdas. 
+**Nuestro link:** https://colab.research.google.com/drive/1Xo_sxP7t0e1KhytM5UAHfHENDab6Tn7P 
+Dar click en el boton ejecutar todo.
 
 La semilla es `42`, así que los resultados son reproducibles. Versiones usadas en la ejecución original: scikit-learn 1.9.1, pandas 3.0.6, numpy 2.5.4, matplotlib 3.11.2.
 
