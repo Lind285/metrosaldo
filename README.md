@@ -1,6 +1,6 @@
 # MetroSaldo – Componente de Machine Learning (APF3)
 
-Modelo que estima el **gasto diario** de un estudiante en el Metropolitano y, con ello, la **fecha aproximada en que su saldo dejará de cubrir un pasaje**.
+Modelo que estima el gasto diario de un estudiante en el Metropolitano y con ello, la fecha aproximada en que su saldo dejará de cubrir un pasaje
 
 
 ## Archivos
@@ -50,7 +50,7 @@ La semilla es `42`, así que los resultados son reproducibles. Versiones usadas 
 - **Ajuste del árbol:** `max_depth` y `min_samples_leaf` se eligieron con el conjunto de validación. El resultado fue `max_depth=5` y `min_samples_leaf=5`.
 - **Evaluación final:** el conjunto de prueba se usó una sola vez.
 
-## Resultados (conjunto de prueba)
+## Resultados 
 
 ### Gasto diario
 
