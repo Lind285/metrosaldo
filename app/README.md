@@ -46,5 +46,3 @@ El archivo `prueba_modelo_js_vs_python.txt` muestra que, en 5 casos del dataset,
 4. Si aparece el aviso para agregar la dependencia `@react-native-async-storage/async-storage`, haz clic en **Add dependency**.
 5. En el panel derecho elige **My Device**. Luego abre Expo Go en el celular y escanea el código QR.
 6. Haz clic en **Save** para obtener un enlace del proyecto, que sirve como evidencia.
-
-> Prueba la app en el celular, no en la vista previa web: las alertas (`Alert`) no se muestran en la versión web.
